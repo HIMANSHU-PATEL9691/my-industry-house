@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Food & Beverages",
+        "icon": "Utensils"
+    },
+    {
+        "id": 2,
+        "name": "Machinery",
+        "icon": "Factory"
+    },
+    {
+        "id": 3,
+        "name": "Chemicals",
+        "icon": "FlaskConical"
+    },
+    {
+        "id": 4,
+        "name": "Packaging",
+        "icon": "Package"
+    }
+]

@@ -1,81 +1,135 @@
-import React from "react";
-import { User, Mail, Phone, MapPin, Lock, Settings, LogOut } from "lucide-react";
+import React, { useState } from "react";
+import { FiUser, FiMail, FiPhone, FiLock } from "react-icons/fi";
 
-export default function Account() {
-    return (
-        <div className="min-h-screen bg-amber-50 py-10 px-4">
-            <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+export default function Register() {
+  const [role, setRole] = useState("buyer");
 
-                {/* Header */}
-                <div className="flex items-center gap-4 mb-8">
-                    <div className="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg">
-                        <User size={40} />
-                    </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-white flex items-center justify-center p-4">
+      <div className="w-full max-w-3xl bg-white shadow-2xl rounded-3xl p-8 md:p-12 border border-yellow-200">
 
-                    <div>
-                        <h2 className="text-3xl font-bold text-gray-900">My Account</h2>
-                        <p className="text-gray-500 text-sm">
-                            Manage your profile, contact details and login security.
-                        </p>
-                    </div>
-                </div>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-serif text-[#6b4f22] text-center">
+          Your B2B Growth Partner
+        </h2>
+        <p className="text-gray-600 text-center mt-2">
+          Connect with a nationwide network of verified suppliers and buyers.
+          Streamline your procurement and expand your market reach with us.
+        </p>
 
-                {/* Profile Section */}
-                <div className="grid md:grid-cols-2 gap-6">
+        {/* Create Account */}
+        <h3 className="text-2xl font-semibold text-center text-[#6b4f22] mt-8">
+          Create Your Account
+        </h3>
+        <p className="text-gray-500 text-center">Join the leading B2B marketplace today.</p>
 
-                    {/* Personal Info */}
-                    <div className="bg-amber-100 p-6 rounded-xl shadow-inner">
-                        <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-                            <User size={20} /> Personal Information
-                        </h3>
+        {/* Register As */}
+        <div className="flex justify-center gap-4 mt-6">
+          <button
+            onClick={() => setRole("buyer")}
+            className={`px-6 py-2 rounded-full border 
+              ${role === "buyer" ? "bg-yellow-400 text-white border-yellow-400" : "border-yellow-300 text-[#6b4f22]"}
+            `}
+          >
+            Buyer
+          </button>
 
-                        <div className="space-y-3">
-                            <p className="flex items-center gap-2 text-gray-700">
-                                <Mail size={18} className="text-blue-600" />
-                                <span>Email:</span>
-                                <strong>himanshu@example.com</strong>
-                            </p>
-
-                            <p className="flex items-center gap-2 text-gray-700">
-                                <Phone size={18} className="text-blue-600" />
-                                <span>Phone:</span>
-                                <strong>+91 9876543210</strong>
-                            </p>
-
-                            <p className="flex items-center gap-2 text-gray-700">
-                                <MapPin size={18} className="text-blue-600" />
-                                <span>Location:</span>
-                                <strong>Gujarat, India</strong>
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Security Settings */}
-                    <div className="bg-amber-100 p-6 rounded-xl shadow-inner">
-                        <h3 className="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-                            <Lock size={20} /> Login & Security
-                        </h3>
-
-                        <div className="space-y-3">
-                            <button className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition shadow-md flex items-center justify-center gap-2">
-                                <Lock size={18} /> Change Password
-                            </button>
-
-                            <button className="w-full bg-white border border-gray-300 py-2 rounded-xl hover:bg-gray-100 transition shadow-md flex items-center justify-center gap-2">
-                                <Settings size={18} /> Account Settings
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Logout Button */}
-                <div className="mt-8 text-center">
-                    <button className="mx-auto bg-red-600 text-white px-6 py-2 rounded-xl text-lg font-medium shadow-lg hover:bg-red-700 transition flex items-center gap-2 justify-center">
-                        <LogOut size={20} />
-                        Logout
-                    </button>
-                </div>
-            </div>
+          <button
+            onClick={() => setRole("seller")}
+            className={`px-6 py-2 rounded-full border 
+              ${role === "seller" ? "bg-yellow-400 text-white border-yellow-400" : "border-yellow-300 text-[#6b4f22]"}
+            `}
+          >
+            Seller
+          </button>
         </div>
-    );
+
+        {/* Form */}
+        <form className="mt-10 space-y-5">
+
+          {/* Full Name */}
+          <div>
+            <label className="text-sm font-medium text-[#6b4f22]">Full Name</label>
+            <div className="flex items-center border border-yellow-300 rounded-xl p-3 bg-[#fffdf6] mt-1">
+              <FiUser className="text-gray-400 text-lg mr-3" />
+              <input
+                type="text"
+                placeholder="e.g., Priya Sharma"
+                className="w-full outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="text-sm font-medium text-[#6b4f22]">Email Address</label>
+            <div className="flex items-center border border-yellow-300 rounded-xl p-3 bg-[#fffdf6] mt-1">
+              <FiMail className="text-gray-400 text-lg mr-3" />
+              <input
+                type="email"
+                placeholder="himanshupatel@digitalflyhigh.in"
+                className="w-full outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <label className="text-sm font-medium text-[#6b4f22]">Contact Number</label>
+            <div className="flex items-center border border-yellow-300 rounded-xl p-3 bg-[#fffdf6] mt-1">
+              <FiPhone className="text-gray-400 text-lg mr-3" />
+              <input
+                type="tel"
+                placeholder="e.g., 9876543210"
+                className="w-full outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
+          {/* Password */}
+          <div>
+            <label className="text-sm font-medium text-[#6b4f22]">Password</label>
+            <div className="flex items-center border border-yellow-300 rounded-xl p-3 bg-[#fffdf6] mt-1">
+              <FiLock className="text-gray-400 text-lg mr-3" />
+              <input
+                type="password"
+                placeholder="••••••••"
+                className="w-full outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
+
+          {/* Confirm Password */}
+          <div>
+            <label className="text-sm font-medium text-[#6b4f22]">Confirm Password</label>
+            <div className="flex items-center border border-yellow-300 rounded-xl p-3 bg-[#fffdf6] mt-1">
+              <FiLock className="text-gray-400 text-lg mr-3" />
+              <input
+                type="password"
+                placeholder="Re-enter your password"
+                className="w-full outline-none bg-transparent"
+              />
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="w-full py-3 bg-yellow-400 text-white font-semibold rounded-full shadow-lg hover:bg-yellow-500 transition"
+          >
+            Create Account
+          </button>
+        </form>
+
+        {/* Already Have Account */}
+        <p className="text-center mt-5 text-gray-600">
+          Already have an account?{" "}
+          <a href="/login" className="text-yellow-600 font-semibold hover:underline">
+            Sign In
+          </a>
+        </p>
+      </div>
+    </div>
+  );
 }

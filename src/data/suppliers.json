@@ -1,0 +1,240 @@
+{
+  "suppliers": [
+    {
+      "id": 101,
+      "name": "Reliable Industrial Solutions Pvt. Ltd.",
+      "logo": "https://placehold.co/100x100/6b4f22/ffffff?text=RIS",
+      "verified": true,
+      "location": "Mumbai, Maharashtra, India",
+      "yearEstablished": 2005,
+      "employeeCount": 150,
+      "certifications": ["ISO 9001:2015", "CE Certified", "Quality Guaranteed"],
+      "description": "Reliable Industrial Solutions is a leading manufacturer of high-grade construction materials and industrial equipment.",
+      "contact": {
+        "phone": "‪+91 98765 43210‬",
+        "email": "sales@reliableind.com",
+        "address": "12/A, Industrial Estate, Vashi, Navi Mumbai - 400703, India",
+        "website": "www.reliableind.com"
+      },
+      "products": [
+        {
+          "id": "P001",
+          "name": "High Tensile Steel Rebar",
+          "category": "Construction Materials",
+          "price": "$750 / Ton",
+          "minOrder": "10 Tons",
+          "image": "/images/login.png"
+        },
+        {
+          "id": "P002",
+          "name": "Heavy Duty Industrial Crane",
+          "category": "Heavy Machinery",
+          "price": "Request Quote",
+          "minOrder": "1 Unit",
+          "image": "https://placehold.co/300x200/6b4f22/ffffff?text=Crane"
+        },
+        {
+          "id": "P003",
+          "name": "Precision CNC Milling Machine",
+          "category": "Tools & Equipment",
+          "price": "$55,000",
+          "minOrder": "1 Unit",
+          "image": "https://placehold.co/300x200/a38048/ffffff?text=CNC"
+        },
+        {
+          "id": "P004",
+          "name": "Warehouse Shelving System",
+          "category": "Storage Solutions",
+          "price": "$45 / Shelf",
+          "minOrder": "100 Units",
+          "image": "https://placehold.co/300x200/6b4f22/ffffff?text=Shelf"
+        },
+        {
+          "id": "P005",
+          "name": "Industrial Safety Helmets",
+          "category": "Safety Gear",
+          "price": "$5 / Unit",
+          "minOrder": "500 Units",
+          "image": "https://placehold.co/300x200/a38048/ffffff?text=Helmet"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "TechGear Automation Ltd.",
+      "logo": "https://placehold.co/100x100/004aad/ffffff?text=TGA",
+      "verified": true,
+      "location": "Pune, Maharashtra, India",
+      "yearEstablished": 2010,
+      "employeeCount": 220,
+      "certifications": ["ISO 14001", "OHSAS 18001"],
+      "description": "TechGear specializes in automation components, sensors, and industrial IoT solutions.",
+      "contact": {
+        "phone": "‪+91 90123 45678‬",
+        "email": "contact@techgear.com",
+        "address": "MIDC, Hinjewadi Phase 2, Pune, India",
+        "website": "www.techgear.com"
+      },
+      "products": [
+        {
+          "id": "T001",
+          "name": "Proximity Sensors",
+          "category": "Automation",
+          "price": "$12 / Unit",
+          "minOrder": "200 Units",
+          "image": "https://placehold.co/300x200/004aad/ffffff?text=Sensor"
+        },
+        {
+          "id": "T002",
+          "name": "PLC Control System",
+          "category": "Automation",
+          "price": "Request Quote",
+          "minOrder": "1 Unit",
+          "image": "https://placehold.co/300x200/002f6c/ffffff?text=PLC"
+        },
+        {
+          "id": "T003",
+          "name": "Robotic Arm (6-Axis)",
+          "category": "Robotics",
+          "price": "$12,000",
+          "minOrder": "1 Unit",
+          "image": "https://placehold.co/300x200/004aad/ffffff?text=Robot"
+        },
+        {
+          "id": "T004",
+          "name": "Industrial Servo Motor",
+          "category": "Motors",
+          "price": "$350",
+          "minOrder": "10 Units",
+          "image": "https://placehold.co/300x200/003b80/ffffff?text=Servo"
+        },
+        {
+          "id": "T005",
+          "name": "Smart IoT Gateway",
+          "category": "IoT Devices",
+          "price": "$85",
+          "minOrder": "50 Units",
+          "image": "https://placehold.co/300x200/002f6c/ffffff?text=IoT"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "EverGreen Packaging Solutions",
+      "logo": "https://placehold.co/100x100/228B22/ffffff?text=EPS",
+      "verified": false,
+      "location": "Delhi, India",
+      "yearEstablished": 2012,
+      "employeeCount": 95,
+      "certifications": ["Eco-Friendly Certified"],
+      "description": "Manufacturers of eco-friendly packaging materials and industrial-grade cartons.",
+      "contact": {
+        "phone": "+91 88990 77665",
+        "email": "info@evergreenpack.com",
+        "address": "Bawana Industrial Area, Delhi",
+        "website": "www.epspack.in"
+      },
+      "products": [
+        {
+          "id": "E001",
+          "name": "Corrugated Boxes (Heavy Duty)",
+          "category": "Packaging",
+          "price": "$0.40 / Box",
+          "minOrder": "1000 Boxes",
+          "image": "https://placehold.co/300x200/228B22/ffffff?text=Box"
+        },
+        {
+          "id": "E002",
+          "name": "Eco-Friendly Bubble Wrap",
+          "category": "Packaging",
+          "price": "$12 / Roll",
+          "minOrder": "200 Rolls",
+          "image": "https://placehold.co/300x200/2d9c2d/ffffff?text=Wrap"
+        },
+        {
+          "id": "E003",
+          "name": "Biodegradable Packing Peanuts",
+          "category": "Packaging",
+          "price": "$25 / Bag",
+          "minOrder": "50 Bags",
+          "image": "https://placehold.co/300x200/228B22/ffffff?text=Peanuts"
+        },
+        {
+          "id": "E004",
+          "name": "Custom Printed Cartons",
+          "category": "Packaging",
+          "price": "Request Quote",
+          "minOrder": "500 Units",
+          "image": "https://placehold.co/300x200/2d9c2d/ffffff?text=Carton"
+        },
+        {
+          "id": "E005",
+          "name": "HDPE Industrial Bags",
+          "category": "Packaging",
+          "price": "$0.30 / Bag",
+          "minOrder": "5000 Bags",
+          "image": "https://placehold.co/300x200/228B22/ffffff?text=Bag"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "SteelMaster India",
+      "logo": "https://placehold.co/100x100/8b0000/ffffff?text=SMI",
+      "verified": true,
+      "location": "Jamshedpur, India",
+      "yearEstablished": 1995,
+      "employeeCount": 500,
+      "certifications": ["ISO 9001", "BIS Certified"],
+      "description": "Leading manufacturer of industrial steel components.",
+      "contact": {
+        "phone": "+91 99887 66554",
+        "email": "support@steelmaster.com",
+        "address": "Tata Industrial Area, Jamshedpur",
+        "website": "www.steelmaster.com"
+      },
+      "products": [
+        {
+          "id": "S001",
+          "name": "Galvanized Steel Sheets",
+          "category": "Materials",
+          "price": "$1200 / Ton",
+          "minOrder": "5 Tons",
+          "image": "https://placehold.co/300x200/8b0000/ffffff?text=Sheets"
+        },
+        {
+          "id": "S002",
+          "name": "Steel Pipes",
+          "category": "Pipes",
+          "price": "$80 / Meter",
+          "minOrder": "500 Meters",
+          "image": "https://placehold.co/300x200/b22222/ffffff?text=Pipes"
+        },
+        {
+          "id": "S003",
+          "name": "Metal Fasteners",
+          "category": "Hardware",
+          "price": "$0.20 / Piece",
+          "minOrder": "10,000 Pieces",
+          "image": "https://placehold.co/300x200/8b0000/ffffff?text=Nuts"
+        },
+        {
+          "id": "S004",
+          "name": "Steel Rods",
+          "category": "Industrial Material",
+          "price": "$45 / Kg",
+          "minOrder": "2000 Kg",
+          "image": "https://placehold.co/300x200/b22222/ffffff?text=Rods"
+        },
+        {
+          "id": "S005",
+          "name": "Stainless Steel Clips",
+          "category": "Hardware",
+          "price": "$0.10 / Piece",
+          "minOrder": "5000 Pieces",
+          "image": "https://placehold.co/300x200/8b0000/ffffff?text=Clips"
+        }
+      ]
+    }
+  ]
+}

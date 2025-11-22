@@ -15,6 +15,9 @@ import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Footer from "./components/Footer";
 
+import SellerProfile from "./pages/SellerProfile";
+
+
 export default function App() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
@@ -31,7 +34,8 @@ export default function App() {
     const UtilityButton = ({ Icon, label, to }) => (
         <button
             onClick={() => navigate(`/${to}`)}
-            className="flex items-center gap-1.5 py-1.5 px-2 rounded-lg hover:bg-amber-200 transition text-sm font-medium"
+            className="flex items-center gap-1.5 py-1.5 px-2 rounded-lg hover:bg-amber-200 
+            transition text-sm font-medium"
         >
             <Icon size={18} />
             <span className="hidden sm:inline">{label}</span>
@@ -39,13 +43,13 @@ export default function App() {
     );
 
     return (
-        <div className="bg-amber-50 min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col bg-amber-50">
 
             {/* HEADER */}
-            <header className="bg-amber-100 shadow-xl sticky top-0 z-20">
+            <header className="bg-amber-100 shadow sticky top-0 z-50 w-full">
                 <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
 
-                    {/* Logo From public/logo.png */}
+                    {/* LOGO */}
                     <div
                         className="flex items-center gap-2 cursor-pointer"
                         onClick={() => navigate("/")}
@@ -61,21 +65,27 @@ export default function App() {
                         <span className="sm:hidden font-bold text-lg">MIH</span>
                     </div>
 
-                    {/* Desktop Search */}
-                    <div className="hidden md:flex flex-1 max-w-xl">
-                        <div className="flex bg-white w-full rounded-xl shadow-md">
+                    {/* DESKTOP SEARCH */}
+                    <div className="hidden md:flex flex-1 justify-center">
+                        <div className="relative w-full max-w-lg">
                             <input
                                 type="text"
-                                className="flex-1 px-4 py-2 text-sm outline-none"
-                                placeholder="Search..."
+                                className="w-full pl-4 pr-12 py-2.5 rounded-2xl border border-gray-300 
+                                focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm outline-none 
+                                text-sm bg-white"
+                                placeholder="Search products, suppliers and RFQs..."
                             />
-                            <button className="bg-blue-600 px-4 text-white">
-                                <Search size={20} />
+
+                            <button
+                                className="absolute right-2 top-1/2 -translate-y-1/2 
+                                p-2 rounded-xl hover:bg-blue-100 transition"
+                            >
+                                <Search size={20} className="text-blue-600" />
                             </button>
                         </div>
                     </div>
 
-                    {/* Utility Buttons */}
+                    {/* UTILITIES */}
                     <div className="flex items-center gap-3">
                         <UtilityButton Icon={MessageSquare} label="Messages" to="messages" />
                         <UtilityButton Icon={Briefcase} label="Sell" to="sell" />
@@ -83,13 +93,14 @@ export default function App() {
 
                         <button
                             onClick={() => navigate("/account")}
-                            className="flex items-center gap-2 py-1.5 px-3 rounded-xl bg-blue-600 text-white hover:bg-blue-700 transition"
+                            className="flex items-center gap-2 py-1.5 px-3 rounded-xl bg-blue-600 
+                            text-white hover:bg-blue-700 transition"
                         >
                             <User size={20} />
                             <span className="hidden sm:inline">My Account</span>
                         </button>
 
-                        {/* Mobile Menu Toggle */}
+                        {/* MOBILE MENU */}
                         <button
                             className="md:hidden p-2"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -99,7 +110,7 @@ export default function App() {
                     </div>
                 </div>
 
-                {/* Desktop Navigation */}
+                {/* DESKTOP NAV */}
                 <nav className="hidden md:block bg-amber-200 border-t">
                     <div className="max-w-7xl mx-auto px-4 py-2 flex gap-8 text-sm font-semibold text-gray-700">
                         {navItems.map((item) => (
@@ -110,8 +121,7 @@ export default function App() {
                                     ${location.pathname === "/" + item.page
                                         ? "text-blue-700 border-b-2 border-blue-700"
                                         : "hover:text-blue-600"
-                                    }`
-                                }
+                                    }`}
                             >
                                 {item.name}
                             </span>
@@ -119,9 +129,9 @@ export default function App() {
                     </div>
                 </nav>
 
-                {/* Mobile Menu */}
+                {/* MOBILE MENU DROPDOWN */}
                 {isMenuOpen && (
-                    <div className="md:hidden bg-amber-100 shadow-xl absolute w-full">
+                    <div className="md:hidden bg-amber-200 shadow-xl w-full absolute left-0 top-full z-40">
                         <div className="p-4 flex flex-col gap-3">
                             {navItems.map((item) => (
                                 <span
@@ -134,8 +144,7 @@ export default function App() {
                                         ${location.pathname === "/" + item.page
                                             ? "bg-amber-300 text-blue-800 font-bold"
                                             : "hover:bg-amber-300"
-                                        }`
-                                    }
+                                        }`}
                                 >
                                     {item.name}
                                 </span>
@@ -145,8 +154,8 @@ export default function App() {
                 )}
             </header>
 
-            {/* ROUTES */}
-            <div className="flex-grow">
+            {/* MAIN CONTENT */}
+            <main className="flex-1 w-full">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/products" element={<Products />} />
@@ -155,8 +164,10 @@ export default function App() {
                     <Route path="/news" element={<News />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/account" element={<Account />} />
+                    <Route path="/seller-profile/:id" element={<SellerProfile />} />
+                    
                 </Routes>
-            </div>
+            </main>
 
             {/* FOOTER */}
             <Footer />
